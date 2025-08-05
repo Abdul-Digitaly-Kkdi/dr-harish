@@ -1,0 +1,9 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary-color: #223044; 
+  --color-accent-red: #a43a24;
+  --color-accent-gold: #c2892e;
+  --color-deep-teal: #1f3b3f;
+  --color-background-color: #f4eddc; /* Logo bg */
+}
