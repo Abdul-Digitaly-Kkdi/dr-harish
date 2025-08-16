@@ -3,6 +3,7 @@ import hero from '../../../assets/Main/Hero.png'
 import { FaMap, FaUserDoctor } from "react-icons/fa6";
 import { FaClinicMedical } from "react-icons/fa";
 import { ImUserCheck } from "react-icons/im";
+import { Link } from "react-router";
 
 const HeroSection = () => {
 
@@ -14,7 +15,7 @@ const HeroSection = () => {
         },
         {
             number: "2",
-            title: "Branch Clinic",
+            title: "Branch Clinics",
             icon: <FaClinicMedical />
         },
         {
@@ -44,11 +45,11 @@ const HeroSection = () => {
                         <h1 className="text-4xl md:text-5xl font-bold leading-tight text-primary-color mb-6">
                             Expert Orthopaedic Care for Pain Relief & Restored Mobility
                         </h1>
-                        <p className="text-gray-600 mb-6 text-justify md:text-start">
+                        <p className="text-gray-600 mb-6 text-justify md:text-base">
                             Begin your journey to a pain-free life with care that’s personal and precise. With over 20 years of experience, Dr. Harish is a trusted orthopaedic specialist known for treating joint pain, sports injuries, and complex bone conditions. Every treatment plan is uniquely tailored — no shortcuts, just expert care. Whether you're an athlete recovering from an injury or dealing with chronic knee or shoulder pain, Dr. Harish uses minimally invasive techniques and advanced joint replacement solutions to help you heal faster, move better, and live pain-free.
                         </p>
                         <button className="bg-accent-red hover:bg-accent-gold text-white font-medium px-6 py-3 cursor-pointer rounded-md transition duration-300">
-                            Book an appointment
+                         Book an appointment
                         </button>
                     </div>
 

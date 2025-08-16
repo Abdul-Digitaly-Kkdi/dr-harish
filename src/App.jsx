@@ -9,7 +9,7 @@ import ScrollToTop from './Component/ScrollToTop'
 import ScrollToTopButton from './Component/ScrollToTopButton'
 import StickyContactButtons from './Component/StickyContactButtons'
 import NotFound from './Pages/NotFound/Index'
-
+import Appoinment from './Component/Appointment'
 const App = () => {
   return (
     <BrowserRouter>
@@ -19,6 +19,7 @@ const App = () => {
       <Routes>
         <Route path="/" element={<MainLayout />}>
           <Route index element={<Home />} />
+          <Route path='appointmet' element={<Appoinment/>}/>
           <Route path='about' element={<AboutPage />} />
           <Route path='services' element={<ServicePage />} />
           <Route path='contact' element={<ContactPage />} />

@@ -14,7 +14,6 @@ const Header = () => {
         { menu: 'Contact', link: 'contact' },
     ];
 
-    const navigation = useNavigate()
 
     return (
         <nav className="bg-background-color shadow-sm sticky top-0 z-50">

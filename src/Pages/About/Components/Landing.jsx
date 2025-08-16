@@ -21,12 +21,12 @@ const Landing = () => {
                         <img
                             src={doctorImage}
                             alt="Orthopaedic Surgeon"
-                            className="w-full sm:w-[50%] h-auto rounded shadow-xl"
+                            className="w-full sm:w-[50%] h-auto  shadow-xl"
                         />
                         <img
                             src={doctorImage1}
                             alt="Orthopaedic Surgeon"
-                            className="w-[50%] hidden sm:block h-auto rounded shadow-xl"
+                            className="w-[50%] hidden sm:block h-auto  shadow-xl"
                         />
                         {/* <div className="absolute bottom-0 left-0 bg-accent-gold text-white px-6 py-2 rounded hover:bg-accent-red transition cursor-pointer flex items-center gap-3">
                             <FaAward className='text-3xl' /> 7 + Years of Experience
@@ -63,8 +63,8 @@ const Landing = () => {
                 </div>
 
                 <div className="bg-background-color p-6 rounded-xl shadow-md max-w-5xl mx-auto mt-10">
-                    <div className="grid md:grid-cols-2 gap-6 text-left">
-                        <div>
+                    <div className="grid md:grid-cols-2 gap-6 text-left ">
+                        <div className='px-5'>
                             <h3 className="text-xl font-semibold text-primary-color mb-2 text-center md:text-start">Our Mission</h3>
                             <p className=" text-accent-red leading-relaxed text-justify">
                                 To restore mobility and improve lives through advanced orthopaedic care and personalized treatment.
@@ -72,7 +72,7 @@ const Landing = () => {
                                 We are committed to delivering patient-centered services that empower recovery and enhance quality of life.
                             </p>
                         </div>
-                        <div>
+                        <div className='px-5'>
                             <h3 className="text-xl font-semibold text-primary-color mb-2 text-center md:text-start">Our Vision</h3>
                             <p className=" text-accent-red leading-relaxed text-justify">
                                 To lead in orthopaedic excellence, restoring mobility and enhancing lives through innovation and compassionate care.

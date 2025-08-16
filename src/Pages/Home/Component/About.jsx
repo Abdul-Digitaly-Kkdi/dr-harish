@@ -28,7 +28,7 @@ const About = () => {
 
                     {/* Content Section */}
                     <div className="space-y-6 font-semibold text-justify md:text-start">
-                        <h2 className="text-3xl md:text-4xl font-bold text-accent-gold text-start">ABOUT US</h2>
+                        <h2 className="text-3xl md:text-4xl font-bold text-accent-gold text-start">ABOUT</h2>
 
                         <p className="text-primary-color text-base md:text-lg">
                             I am a dedicated Orthopaedic Surgeon specializing in joint replacement, arthroscopy, and trauma surgeries. With nearly a decade of experience, I am passionate about restoring mobility through advanced surgical techniques and personalized care.

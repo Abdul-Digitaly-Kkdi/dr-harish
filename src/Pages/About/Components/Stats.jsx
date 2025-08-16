@@ -18,7 +18,7 @@ const HeroWithStats = () => {
                     <h4 className="text-accent-red uppercase tracking-wide text-xl font-semibold mb-4">
                         Committed to Excellence
                     </h4>
-                    <h1 className="text-3xl md:text-5xl font-bold leading-tight mb-6 text-accent-gold">
+                    <h1 className="text-3xl md:text-4xl font-bold leading-tight mb-6 text-accent-gold">
                         Individually Tailored Treatment: Your Path to Wellness
                     </h1>
                     <button className="bg-accent-red text-white font-semibold px-6 py-2 rounded-md hover:bg-accent-gold transition cursor-pointer"
@@ -34,9 +34,9 @@ const HeroWithStats = () => {
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 px-4 py-10 max-w-6xl mx-auto">
                 {[
                     { count: "8+", label: "Professional Staff" },
-                    { count: "2+", label: "Branch Clinic" },
-                    { count: "5,300+", label: "Satisfied Client" },
-                    { count: "5,800+", label: "Treatment Complete" },
+                    { count: "2+", label: "Our Values" },
+                    { count: "5,300+", label: "Satisfied Clients" },
+                    { count: "5,800+", label: "Treatments Complete" },
                 ].map((item, idx) => (
                     <div key={idx} className="bg-white rounded-2xl text-center shadow p-6">
                         <h3 className="text-3xl font-bold text-sky-900">{item.count}</h3>

@@ -31,9 +31,11 @@ const steps = [
 
 const HowItWorks = () => {
     return (
-        <section className="bg-background-color py-16 px-4 text-center relative overflow-hidden -z-20">
+        <section className="bg-background-color py-16 px-4 text-center relative overflow-visible select-text cursor-text">
             <div className="max-w-5xl mx-auto">
-                <p className="text-3xl md:text-4xl text-yellow-600 font-semibold tracking-widest mb-2">HOW IT WORK</p>
+                <p className="text-3xl md:text-4xl text-yellow-600 font-semibold tracking-widest mb-2">
+                    HOW IT WORKS
+                </p>
                 <h2 className="text-3xl md:text-4xl font-bold text-primary-color mb-10 leading-snug">
                     A Patient-Centered Approach for Effective, <br /> Long-Lasting Results
                 </h2>
@@ -42,10 +44,14 @@ const HowItWorks = () => {
                     {steps.map((step, index) => (
                         <div
                             key={index}
-                            className={`bg-white rounded-xl p-6 text-left shadow-sm hover:shadow-md transition ${index % 2 == 1 ? 'md:mt-10 ' : 'md:mb-10'}`}
+                            className={`bg-white rounded-xl p-6 text-left shadow-sm hover:shadow-md transition ${
+                                index % 2 === 1 ? "md:mt-10" : "md:mb-10"
+                            }`}
                         >
                             <div className="mb-4">{step.icon}</div>
-                            <h3 className="text-lg font-semibold text-gray-900 mb-2">{step.title}</h3>
+                            <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                                {step.title}
+                            </h3>
                             <p className="text-sm text-gray-600">{step.description}</p>
                         </div>
                     ))}
@@ -53,7 +59,7 @@ const HowItWorks = () => {
             </div>
 
             <div className="absolute top-[-80px] left-[-80px] w-60 h-60 border-[30px] border-accent-gold rounded-full opacity-50 -z-10"></div>
-            <div className="absolute bottom-[-80px] right-[-80px] w-60 h-60 border-[30px] border-accent-gold rounded-full opacity-50 -z-10"></div>
+            {/* <div className="absolute bottom-[-80px] right-[-80px] w-60 h-60 border-[30px] border-accent-gold rounded-full opacity-50 -z-10"></div> */}
         </section>
     );
 };

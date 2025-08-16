@@ -51,10 +51,10 @@ const CoreValues = () => {
                 {/* Right Side: Heading + Image */}
                 <div className="space-y-6">
                     <div>
-                        <p className="text-yellow-600 font-medium uppercase tracking-wide text-xl">
+                        <p className="text-yellow-600 font-medium uppercase tracking-wide text-base">
                             Our Value
                         </p>
-                        <h2 className="text-3xl md:text-4xl font-bold text-primary-color mt-2">
+                        <h2 className="text-3xl md:text-[32px] font-bold text-primary-color mt-2">
                             Our Core Values: Guiding Principles of Quality Care
                         </h2>
                     </div>

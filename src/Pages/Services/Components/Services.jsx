@@ -11,10 +11,10 @@ const ServiceSection = () => {
             <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 {/* Text Content */}
                 <div className="space-y-6">
-                    <p className="text-accent-gold uppercase tracking-widest font-semibold text-xl animate-fade-in">
+                    <p className="text-accent-gold uppercase tracking-widest font-semibold text-[32px] animate-fade-in">
                         Our Services
                     </p>
-                    <h2 className="text-4xl font-bold text-primary-color leading-tight animate-fade-in delay-200">
+                    <h2 className="text-3xl font-bold text-primary-color leading-tight animate-fade-in delay-200">
                         Cutting-edge Physiotherapy Services for Optimal Recovery
                     </h2>
                     <p className="text-gray-700 text-lg animate-fade-in delay-300 text-justify">
