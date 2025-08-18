@@ -14,6 +14,13 @@ const Header = () => {
         { menu: 'Contact', link: 'contact' },
     ];
 
+          // Scroll handler
+  const scrollToAppointment = () => {
+    const section = document.getElementById("appoinment"); // <-- id from Appointment.jsx
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
     return (
         <nav className="bg-background-color shadow-sm sticky top-0 z-50">
@@ -35,7 +42,7 @@ const Header = () => {
                         </a>
                     ))}
                     <button className="bg-accent-red px-4 py-2 rounded-md text-white hover:bg-accent-gold transition flex items-center gap-2 cursor-pointer"
-                        onClick={() => navigation('#appoinment')}
+                          onClick={scrollToAppointment}
                     >
                         <FaPlus /> Make an Appointment
                     </button>
@@ -61,8 +68,8 @@ const Header = () => {
                             {link.menu}
                         </a>
                     ))}
-                    <button className="w-[50%] ml-3 bg-accent-gold text-white px-4 py-2 rounded-md hover:bg-blue-500 transition">
-                        Make a Appointment
+                    <button className="w-[50%] ml-3 bg-accent-gold text-white px-4 py-2 rounded-md hover:bg-blue-500 transition"  onClick={scrollToAppointment}>
+                         Make an Appointment
                     </button>
                 </div>
             )}

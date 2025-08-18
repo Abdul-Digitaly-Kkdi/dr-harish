@@ -3,7 +3,6 @@ import hero from '../../../assets/Main/Hero.png'
 import { FaMap, FaUserDoctor } from "react-icons/fa6";
 import { FaClinicMedical } from "react-icons/fa";
 import { ImUserCheck } from "react-icons/im";
-import { Link } from "react-router";
 
 const HeroSection = () => {
 
@@ -31,6 +30,13 @@ const HeroSection = () => {
         "Harshamitra Hospital, Nagamangalam, Trichy",
         "Velan Speciality, Subramaniyapuram, Trichy"
     ];
+      // Scroll handler
+  const scrollToAppointment = () => {
+    const section = document.getElementById("appoinment"); // <-- id from Appointment.jsx
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
     return (
         <section className="bg-background-color/60 relative overflow-hidden py-12 px-4 ">
@@ -48,7 +54,7 @@ const HeroSection = () => {
                         <p className="text-gray-600 mb-6 text-justify md:text-base">
                             Begin your journey to a pain-free life with care that’s personal and precise. With over 20 years of experience, Dr. Harish is a trusted orthopaedic specialist known for treating joint pain, sports injuries, and complex bone conditions. Every treatment plan is uniquely tailored — no shortcuts, just expert care. Whether you're an athlete recovering from an injury or dealing with chronic knee or shoulder pain, Dr. Harish uses minimally invasive techniques and advanced joint replacement solutions to help you heal faster, move better, and live pain-free.
                         </p>
-                        <button className="bg-accent-red hover:bg-accent-gold text-white font-medium px-6 py-3 cursor-pointer rounded-md transition duration-300">
+                        <button    onClick={scrollToAppointment} className="bg-accent-red hover:bg-accent-gold text-white font-medium px-6 py-3 cursor-pointer rounded-md transition duration-300">
                          Book an appointment
                         </button>
                     </div>
@@ -67,7 +73,7 @@ const HeroSection = () => {
                     </div>
                 </div>
                 <div className="bg-background-color flex flex-col sm:flex-row gap-5 mt-5 py-5 z-10">
-                    {data.map((data, i) => (
+                    {data.map((data) => (
                         <div className="flex flex-col justify-center gap-3 items-center w-full ">
                             <p className="text-3xl text-accent-gold">{data.icon}</p>
                             <p className="text-lg font-semibold">{data.number}</p>
