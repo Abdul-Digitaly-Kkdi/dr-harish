@@ -8,7 +8,6 @@ function Appoinment() {
   const TEMPLATE_ID = "template_kpr67om";
   const PUBLIC_KEY = "wfQhjB51RIvGUx-z5";
 
-  // Helper: yyyy-mm-dd in LOCAL time (avoids UTC shift issues)
   const todayStr = useMemo(() => {
     const d = new Date();
     const y = d.getFullYear();
@@ -29,15 +28,9 @@ function Appoinment() {
   const [success, setSuccess] = useState(false);
   const [submissionError, setSubmissionError] = useState("");
 
-  // Robust email validation:
-  // - exactly one @
-  // - local part: ASCII only, no leading/trailing/consecutive dots, allowed RFC chars
-  // - domain: ASCII only, at least one dot, no trailing dot, labels [a-z0-9-], no leading/trailing hyphen
-  // - TLD at least 2 letters
   const isValidEmail = (emailRaw) => {
     const email = emailRaw.trim();
 
-    // ASCII-only (blocks emojis and other unicode)
     for (const ch of email) {
       if (ch.charCodeAt(0) > 127) return false;
     }
@@ -47,27 +40,22 @@ function Appoinment() {
 
     const [local, domain] = parts;
 
-    // Local part rules
     if (!local) return false;
     if (local.startsWith(".") || local.endsWith(".")) return false;
     if (local.includes("..")) return false;
-    // Allowed chars in local: a-z0-9 and these specials !#$%&'*+/=?^_`{|}~ and dot (already checked placement)
     if (!/^[A-Za-z0-9!#$%&'*+/=?^_`{|}~.]+$/.test(local)) return false;
 
-    // Domain rules
     if (!domain) return false;
-    if (domain.endsWith(".")) return false; // trailing dot not allowed
+    if (domain.endsWith(".")) return false;
     if (domain.includes("..")) return false;
-    if (!domain.includes(".")) return false; // require at least one dot (e.g., example.com)
+    if (!domain.includes(".")) return false;
 
     const labels = domain.split(".");
     for (const label of labels) {
-      // label: 1–63 chars, alnum or hyphen, no leading/trailing hyphen
       if (!/^[A-Za-z0-9-]{1,63}$/.test(label)) return false;
       if (label.startsWith("-") || label.endsWith("-")) return false;
     }
 
-    // TLD check (last label is at least 2 letters)
     const tld = labels[labels.length - 1];
     if (!/^[A-Za-z]{2,}$/.test(tld)) return false;
 
@@ -77,27 +65,83 @@ function Appoinment() {
   const handleChange = (e) => {
     const { name, value } = e.target;
 
+    let updatedValue = value;
+    let error = "";
+
     setFormData((prev) => {
       if (name === "phone") {
-        // Digits only, max 10
-        const digits = value.replace(/\D/g, "").slice(0, 10);
-        return { ...prev, phone: digits };
+        updatedValue = value.replace(/\D/g, "").slice(0, 10);
       }
 
       if (name === "name") {
-        // Letters and spaces only (NO dots)
-        const cleaned = value.replace(/[^A-Za-z ]+/g, "");
-        return { ...prev, name: cleaned };
+        updatedValue = value.replace(/[^A-Za-z ]+/g, "");
       }
 
-      return { ...prev, [name]: value };
+      return { ...prev, [name]: updatedValue };
     });
+
+    switch (name) {
+      case "name":
+        const trimmedName = updatedValue.trim();
+        if (!trimmedName) {
+          error = "Name is required";
+        } else if (!/^[A-Za-z ]+$/.test(trimmedName)) {
+          error = "Name can contain only letters and spaces";
+        } else if (trimmedName.length < 3) {
+          error = "Name must be at least 3 characters";
+        } else if (trimmedName.length > 30) {
+          error = "Name cannot exceed 30 characters";
+        }
+        break;
+
+      case "email":
+        const trimmedEmail = updatedValue.trim();
+        if (!trimmedEmail) {
+          error = "Email is required";
+        } else if (!isValidEmail(trimmedEmail)) {
+          error = "Enter a valid email address";
+        }
+        break;
+
+      case "phone":
+        const phone = updatedValue.trim();
+        if (!phone) {
+          error = "Mobile number is required";
+        } else if (!/^\d+$/.test(phone)) {
+          error = "Mobile number must contain digits only";
+        } else if (phone.length < 10) {
+          error = "Mobile number must be exactly 10 digits";
+        } else if (!/^[6-9]/.test(phone)) {
+          error = "Mobile number must start with 6, 7, 8, or 9";
+        }
+        break;
+
+      case "date":
+        if (!updatedValue) {
+          error = "Select a date";
+        } else {
+          const picked = new Date(updatedValue + "T00:00:00");
+          const today = new Date();
+          today.setHours(0, 0, 0, 0);
+          if (picked < today) {
+            error = "Past dates are not allowed";
+          }
+        }
+        break;
+
+      default:
+        break;
+    }
+
+    setErrors((prev) => ({
+      ...prev,
+      [name]: error,
+    }));
   };
 
   const validate = () => {
     const newErrors = {};
 
-    // NAME
     const name = formData.name.trim();
     if (!name) {
       newErrors.name = "Name is required";
@@ -109,7 +153,6 @@ function Appoinment() {
       newErrors.name = "Name cannot exceed 30 characters";
     }
 
-    // EMAIL
     const email = formData.email.trim();
     if (!email) {
       newErrors.email = "Email is required";
@@ -117,7 +160,6 @@ function Appoinment() {
       newErrors.email = "Enter a valid email address";
     }
 
-    // PHONE
     const phone = formData.phone.trim();
     if (!phone) {
       newErrors.phone = "Mobile number is required";
@@ -127,15 +169,12 @@ function Appoinment() {
       newErrors.phone = "Mobile number must be exactly 10 digits";
     } else if (!/^[6-9]/.test(phone)) {
       newErrors.phone = "Mobile number must start with 6, 7, 8, or 9";
-    } else if (!/^[6-9]\d{9}$/.test(phone)) {
-      newErrors.phone = "Enter a valid 10-digit mobile number";
     }
 
-    // DATE
     if (!formData.date) {
       newErrors.date = "Select a date";
     } else {
-      const picked = new Date(formData.date + "T00:00:00"); // treat as local date
+      const picked = new Date(formData.date + "T00:00:00");
       const today = new Date();
       today.setHours(0, 0, 0, 0);
       if (picked < today) {
@@ -178,7 +217,6 @@ function Appoinment() {
         setSubmissionError("Something went wrong. Please try again.");
       } finally {
         setLoading(false);
-        // Clear transient banners after a moment
         setTimeout(() => {
           setSuccess(false);
           setSubmissionError("");
@@ -266,15 +304,14 @@ function Appoinment() {
                   </div>
                 </div>
 
-                {/* Date (past dates disabled) */}
+                {/* Date */}
                 <div>
                   <input
                     type="date"
                     name="date"
-                    placeholder="Select Date"
                     value={formData.date}
                     onChange={handleChange}
-                    min={todayStr} // disables all past dates in the picker
+                    min={todayStr}
                     className="bg-gray-100 text-black p-3 rounded-md outline-0 w-full text-[12px]
                       focus:border-accent-gold focus:border-2 focus:ring-0 cursor-text transition-all duration-200"
                   />
@@ -328,11 +365,7 @@ function Appoinment() {
           </div>
         </div>
       </div>
-
-
     </div>
-
-
   );
 }
 
