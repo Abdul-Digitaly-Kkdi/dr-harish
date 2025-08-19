@@ -4,9 +4,9 @@ import appoinment from "../assets/About.png";
 import emailjs from "emailjs-com";
 
 function Appoinment() {
-  const SERVICE_ID = "service_jgstobf";
-  const TEMPLATE_ID = "template_5sw9fvk";
-  const PUBLIC_KEY = "Zr5o9Z93wf4aMsUnF";
+  const SERVICE_ID = "service_j8bk8uj";
+  const TEMPLATE_ID = "template_kpr67om";
+  const PUBLIC_KEY = "wfQhjB51RIvGUx-z5";
 
   // Helper: yyyy-mm-dd in LOCAL time (avoids UTC shift issues)
   const todayStr = useMemo(() => {
