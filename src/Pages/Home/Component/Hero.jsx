@@ -49,10 +49,19 @@ const HeroSection = () => {
                     {/* Left Text */}
                     <div className="text-center lg:text-left max-w-xl">
                         <h1 className="text-4xl md:text-5xl font-bold leading-tight text-primary-color mb-6">
-                            Expert Orthopaedic Care for Pain Relief & Restored Mobility
+                            Expert Orthopaedic Care, for a Pain-Free Life Ahead
                         </h1>
                         <p className="text-gray-600 mb-6 text-justify md:text-base">
-                            Begin your journey to a pain-free life with care that’s personal and precise. With over 20 years of experience, Dr. Harish is a trusted orthopaedic specialist known for treating joint pain, sports injuries, and complex bone conditions. Every treatment plan is uniquely tailored — no shortcuts, just expert care. Whether you're an athlete recovering from an injury or dealing with chronic knee or shoulder pain, Dr. Harish uses minimally invasive techniques and advanced joint replacement solutions to help you heal faster, move better, and live pain-free.
+                            Start your journey to a pain-free life by stepping into a practice that puts its patients first. At Dr. Harish's place, you'll get personalised orthopaedic care that's all about achieving long-term results, and doing it with precision and a focus on safety. With a whopping 20+ years worth of experience under his belt, Dr. Harish has built a reputation as one of the very best, - a top-notch orthopaedic doc in Trichy that people trust with joint pain, sports injuries and tricky bone and muscle problems.
+                        </p>
+                        <p className="text-gray-600 mb-6 text-justify md:text-base">
+                            Located at Orthopaedics Trichy Cantonment, Dr. Harish tailors every treatment plan to each patient and their needs - lifestyle, recovery goals and all!. You won't find any cookie-cutter solutions here, just solid evidence-based care that aims to get you moving again and pain-free.
+                        </p>
+                        <p className="text-gray-600 mb-6 text-justify md:text-base">
+                            If you're an athlete recovering from a nasty sports injury, or just dealing with chronic knee, shoulder, or hip pain that just won't quit, Dr. Harish is your guy. With the latest minimally invasive techniques and modern joint replacement methods, you can look forward to faster healing times, improved mobility and getting back to your life ASAP.
+                        </p>
+                        <p className="text-gray-600 mb-6 text-justify md:text-base">
+                            With a practice that puts patients first, and a clear commitment to doing the best job possible, Dr. Harish is raising the bar in orthopaedic care and that's why people keep coming back to him for reliable, long-term relief from musculoskeletal pain in Trichy.
                         </p>
                         <button    onClick={scrollToAppointment} className="bg-accent-red hover:bg-accent-gold text-white font-medium px-6 py-3 cursor-pointer rounded-md transition duration-300">
                          Book an appointment

@@ -1,15 +1,15 @@
 import React from 'react'
 import ServiceSection from './Components/Services'
-import ServicesSection from '../Home/Component/Services'
-import HowItWorks from '../Home/Component/HowIsIt'
 import Appoinment from '../../Component/Appointment'
+import Ourservices from './Components/Ourservices'
+import Oursection from './Components/Oursection'
 
 const ServicePage = () => {
     return (
         <div>
             <ServiceSection />
-            <ServicesSection />
-            <HowItWorks />
+            <Ourservices />
+            <Oursection />
             <Appoinment />
         </div>
     )

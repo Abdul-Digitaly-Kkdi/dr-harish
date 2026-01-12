@@ -31,14 +31,14 @@ const About = () => {
                         <h2 className="text-3xl md:text-4xl font-bold text-accent-gold text-start">ABOUT</h2>
 
                         <p className="text-primary-color text-base md:text-lg">
-                            I am a dedicated Orthopaedic Surgeon specializing in joint replacement, arthroscopy, and trauma surgeries. With nearly a decade of experience, I am passionate about restoring mobility through advanced surgical techniques and personalized care.
+                            I am a dedicated Orthopaedic Surgeon with a decade plus of hands-on experience that has taught me a thing or two about joint replacement, arthroscopy & trauma related surgeries. I've developed a knack for getting people moving again & taking away the pain through a combination of the latest surgical techniques and one on one patient care that's tailored to each person's unique needs. In my line of work, I live by the standards that the top Orthopedic Surgeons set, putting precision, safety and long-term outcomes first in every case.
                         </p>
 
                         <p className="text-primary-color text-base md:text-lg">
-                            I completed a fellowship in Arthroscopy and Sports Medicine, treating professional athletes with complex ligament injuries. My expertise extends to joint replacement surgeries, including complex knee and hip replacements.
+                            I also just happened to do a fellowship in Arthroscopy and Sports Medicine that I spent working with pro athletes that had some of the most complex ligament and sports related injuries around. That experience really helped me develop a solid understanding of minimally invasive procedures as well as get really good at getting people back on their feet faster. I do a lot of work with joint replacement surgeries, with a real focus on those harder knee and hip replacement cases.
                         </p>
                         <p className="text-primary-color text-base md:text-lg">
-                            Committed to patient-centered care, I stay updated with the latest advancements in orthopaedics to provide the best possible treatments. My goal is to help patients regain function, mobility, and a pain-free, active lifestyle.
+                            As a go to Orthopaedic Specialist in Trichy you can bet I'm all about putting my patients first, & I stay on top of the latest in orthopaedics by making it a point to stay up to date on the latest developments in the field. Every treatment plan is made to order for the individual, taking into account their particular situation, lifestyle and what their goals are & how best to get them there. My goal is all about helping people get their lives back by getting them moving again, feeling normal again & living pain free the way they should be.
                         </p>
 
                         <div className="flex flex-col sm:flex-row sm:items-center gap-4">

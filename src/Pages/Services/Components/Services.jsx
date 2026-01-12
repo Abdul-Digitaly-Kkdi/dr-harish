@@ -15,10 +15,13 @@ const ServiceSection = () => {
                         Our Services
                     </p>
                     <h2 className="text-3xl font-bold text-primary-color leading-tight animate-fade-in delay-200">
-                        Cutting-edge Physiotherapy Services for Optimal Recovery
+                        Comprehensive Orthopaedic Care: Pain Relief & Restored Mobility - Our Strength
                     </h2>
                     <p className="text-gray-700 text-lg animate-fade-in delay-300 text-justify">
-                        HOMC is more than just a clinic—it's a place where your health and comfort are prioritized. Our expert chiropractors and physiotherapists are dedicated to providing treatment plans that are tailored to your individual needs.
+                        At our state-of-the-art ortho care hospital in Trichy, we give our patients a complete and bespoke bone and joint solution under one roof. We're led by some of the very best orthopaedic doctors in the region, and our team - made up of the top orthopedic surgeons - have a reputation for delivering accurate diagnoses, using cutting edge treatments, and sorting out long-term recovery plans that really work.
+                    </p>
+                    <p className="text-gray-700 text-lg animate-fade-in delay-300 text-justify">
+                        Our team in Trichy combines the latest medical technology with a genuine patient-centric approach - to help folk get back on their feet (literally!), reduce pain, and get active again with the minimum of hassle.
                     </p>
                     <button className="cursor-pointer mt-4 inline-block px-6 py-3 bg-accent-red text-white font-semibold rounded-lg shadow-md hover:bg-accent-gold"
                         onClick={() => nav('/contact')}

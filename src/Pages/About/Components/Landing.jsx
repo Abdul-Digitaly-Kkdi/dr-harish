@@ -38,20 +38,20 @@ const Landing = () => {
                         <h2 className="text-3xl md:text-4xl font-bold text-accent-gold text-start">ABOUT US</h2>
 
                         <p className="text-primary-color text-base md:text-lg">
-                            I am a dedicated Orthopaedic Surgeon specializing in joint replacement, arthroscopy, and trauma surgeries. With nearly a decade of experience, I am passionate about restoring mobility through advanced surgical techniques and personalized care.
+                            I am a dedicated Orthopaedic Surgeon with a passion for joint replacement, arthroscopy, and trauma surgery. With almost 10 years of clinical experience under my belt, you can be guaranteed a deep commitment to getting you moving again & taking the pain away. My approach to surgery has to match up to the very highest standards expected of the top Orthopaedic Doctors in Trichy - and it does. Safety, precision and long-term outcomes take centre stage every time I operate.
                         </p>
 
                         <p className="text-primary-color text-base md:text-lg">
-                            I completed a fellowship in Arthroscopy and Sports Medicine, treating professional athletes with complex ligament injuries. My expertise extends to joint replacement surgeries, including complex knee and hip replacements.
+                            I did a fellowship in Arthroscopy and Sports Medicine too - that's where I learned how to fix injuries that can stop top sports pros from competing. This extra training has given me a real edge in all sorts of minimally invasive procedures and in getting patients back out doing what they love.
                         </p>
                         <p className="text-primary-color text-base md:text-lg">
-                            Committed to patient-centered care, I stay updated with the latest advancements in orthopaedics to provide the best possible treatments. My goal is to help patients regain function, mobility, and a pain-free, active lifestyle.
+                            My speciality also covers advanced joint replacement surgery - which I only do for the most tricky knee and hip replacement cases. As an Orthopaedic specialist based in Trichy, my patients get a warm, caring approach that puts them at the heart of everything I do - whether it's a tricky injury or a long-standing musculoskeletal complaint. I believe that every patient is unique & deserves a bespoke treatment plan that takes their unique situation, lifestyle and goals into consideration.
                         </p>
                         <p className="text-primary-color text-base md:text-lg">
-                            I am dedicated to providing comprehensive, compassionate care to my patients, ensuring they receive the best treatment for both acute injuries and chronic musculoskeletal conditions. Having worked with a diverse range of patients, I take pride in offering personalized solutions that promote long-term health and mobility. Whether performing advanced joint replacements or minimally invasive arthroscopy, my goal is always to improve my patients’ quality of life and help them return to an active, pain-free lifestyle.
+                            The upshot is that I pride myself on being a comprehensive, compassionate & truly caring Orthopaedic specialist. I like to think that I can offer my patients solutions that really work in the long-term - whether I'm doing a joint replacement or an arthroscopy. My one big aim is to make life better for my patients, so that they can get back to a full, active life free from pain.
                         </p>
                         <p className="text-primary-color text-base md:text-lg">
-                            Beyond my clinical practice, I stay up to date with the latest advancements in orthopaedics, continually refining my skills and knowledge to offer the most effective treatments. With a patient-centered approach, I am committed to providing the highest standard of care, utilizing the latest advancements in orthopaedic techniques to ensure the best possible outcomes.
+                           Outside of the clinic, I make a point of keeping up to speed with all the latest breakthroughs in Orthopaedics - so that I'm always the best I can be. My approach to practice is built on a foundation of ethics, transparency and patient education - and I always try to deliver the absolute highest level of care at every stage of treatment.
                         </p>
 
                         <div className="flex flex-col sm:flex-row sm:items-center gap-4">
@@ -67,17 +67,17 @@ const Landing = () => {
                         <div className='px-5'>
                             <h3 className="text-xl font-semibold text-primary-color mb-2 text-center md:text-start">Our Mission</h3>
                             <p className=" text-accent-red leading-relaxed text-justify">
-                                To restore mobility and improve lives through advanced orthopaedic care and personalized treatment.
+                                It's our mission at my clinic to help patients recover, regain their strength and get back to living life to the full.
                                 <br />
-                                We are committed to delivering patient-centered services that empower recovery and enhance quality of life.
+                               We have a real commitment to delivering patient-centred treatment, because we believe that that's what really makes a difference.
                             </p>
                         </div>
                         <div className='px-5'>
                             <h3 className="text-xl font-semibold text-primary-color mb-2 text-center md:text-start">Our Vision</h3>
                             <p className=" text-accent-red leading-relaxed text-justify">
-                                To lead in orthopaedic excellence, restoring mobility and enhancing lives through innovation and compassionate care.
+                                Our aim is to be the best in Orthopaedics by combining our expertise in this field with the latest advances in care and an unwavering commitment to what really matters - our patients.
                                 <br />
-                                Our vision is to be recognized as a trusted center of excellence in the field of bone and joint health.
+                                We want to be the go-to place for bone and joint care, a place where people can trust that they'll get the best possible treatment - and the results that go with it.
                             </p>
                         </div>
                     </div>

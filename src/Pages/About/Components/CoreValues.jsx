@@ -5,22 +5,22 @@ const coreValues = [
     {
         number: "01",
         title: "Personalized Treatment Plans",
-        text: "Every patient is unique, and so is their treatment. We provide customized care plans tailored to your specific condition and recovery goals, ensuring the best possible outcome.",
+        text: "Every patient’s condition and recovery journey is unique. We create customised treatment plans based on accurate diagnosis, lifestyle needs, and recovery goals to ensure the best possible outcomes and long-term joint health.",
     },
     {
         number: "02",
         title: "Experienced Professionals",
-        text: "Our team of highly skilled orthopaedic specialists has years of experience treating joint, bone, and sports injuries with advanced techniques, ensuring expert diagnosis and treatment.",
+        text: "Our team of highly skilled orthopaedic specialists brings years of experience in treating joint disorders, bone conditions, and sports injuries. Using advanced techniques and evidence-based practices, we ensure precise diagnosis and effective treatment.",
     },
     {
         number: "03",
         title: "Comprehensive Services",
-        text: "From arthroscopy and joint replacements to sports injury rehabilitation, we offer a full spectrum of orthopaedic solutions under one roof, ensuring seamless and efficient care.",
+        text: "From minimally invasive arthroscopy and advanced joint replacement procedures to sports injury management and rehabilitation, we offer a complete range of orthopaedic services under one roof for seamless and coordinated care.",
     },
     {
         number: "04",
         title: "Holistic Approach to Healing",
-        text: "We treat the root cause, not just symptoms. Our approach includes minimally invasive treatments, physiotherapy, lifestyle changes, and long-term wellness strategies.",
+        text: "We focus on treating the root cause, not just the symptoms. Our holistic approach combines minimally invasive treatments, physiotherapy, pain management, lifestyle guidance, and long-term wellness strategies to support complete recovery and sustained mobility.",
     },
 ];
 
