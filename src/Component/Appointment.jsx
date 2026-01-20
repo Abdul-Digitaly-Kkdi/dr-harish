@@ -2,6 +2,7 @@ import React, { useState, useMemo } from "react";
 import { FiArrowUpRight } from "react-icons/fi";
 import appoinment from "../assets/About.png";
 import emailjs from "emailjs-com";
+import SEO from "./Seo";
 
 function Appoinment() {
   const SERVICE_ID = "service_j8bk8uj";
@@ -226,146 +227,153 @@ function Appoinment() {
   };
 
   return (
-    <div
-      className="relative bg-black/10 bg-fixed bg-center bg-cover text-white"
-      style={{ backgroundImage: `url(${appoinment})` }}
-      id="appoinment"
-    >
-      <div className="bg-primary-color/90 py-5 md:py-15">
-        <div className="max-w-6xl mx-auto flex flex-col md:flex-row p-5 z-10">
-          <div className="w-full lg:w-6/12 shadow-lg px-5 bg-white z-10 relative rounded-lg">
-            <form onSubmit={handleSubmit} noValidate className="space-y-2">
-              <h2 className="text-2xl md:text-3xl text-accent-red font-semibold mb-6 py-3">
-                Book Your Appointment
-              </h2>
+    <>
+      <SEO
+        title="Book Appointment with Orthopaedic Doctor in Trichy"
+        description="Book your appointment with Dr Harish, an experienced orthopaedic doctor in Trichy. Contact us today for expert bone and joint care."
+      />
 
-              <div className="grid sm:grid-cols-2 md:grid-cols-2 gap-3">
-                {/* Name */}
-                <div>
-                  <input
-                    type="text"
-                    name="name"
-                    placeholder="Name"
-                    value={formData.name}
-                    onChange={handleChange}
-                    maxLength={30}
-                    minLength={3}
-                    className="bg-gray-100 text-black p-3 rounded-md outline-0 w-full text-[12px]
+      <div
+        className="relative bg-black/10 bg-fixed bg-center bg-cover text-white"
+        style={{ backgroundImage: `url(${appoinment})` }}
+        id="appoinment"
+      >
+        <div className="bg-primary-color/90 py-5 md:py-15">
+          <div className="max-w-6xl mx-auto flex flex-col md:flex-row p-5 z-10">
+            <div className="w-full lg:w-6/12 shadow-lg px-5 bg-white z-10 relative rounded-lg">
+              <form onSubmit={handleSubmit} noValidate className="space-y-2">
+                <h2 className="text-2xl md:text-3xl text-accent-red font-semibold mb-6 py-3">
+                  Book Your Appointment
+                </h2>
+
+                <div className="grid sm:grid-cols-2 md:grid-cols-2 gap-3">
+                  {/* Name */}
+                  <div>
+                    <input
+                      type="text"
+                      name="name"
+                      placeholder="Name"
+                      value={formData.name}
+                      onChange={handleChange}
+                      maxLength={30}
+                      minLength={3}
+                      className="bg-gray-100 text-black p-3 rounded-md outline-0 w-full text-[12px]
                       focus:border-accent-gold focus:border-2 focus:ring-0 cursor-text transition-all duration-200"
-                    autoComplete="name"
-                  />
-                  <div className="min-h-[18px] mt-1">
-                    {errors.name && (
-                      <p className="text-red-500 text-xs text-right">{errors.name}</p>
-                    )}
+                      autoComplete="name"
+                    />
+                    <div className="min-h-[18px] mt-1">
+                      {errors.name && (
+                        <p className="text-red-500 text-xs text-right">{errors.name}</p>
+                      )}
+                    </div>
+                  </div>
+
+                  {/* Email */}
+                  <div>
+                    <input
+                      type="email"
+                      name="email"
+                      placeholder="Email"
+                      value={formData.email}
+                      onChange={handleChange}
+                      maxLength={254}
+                      className="bg-gray-100 text-black p-3 rounded-md outline-0 w-full text-[12px]
+                      focus:border-accent-gold focus:border-2 focus:ring-0 cursor-text transition-all duration-200"
+                      autoComplete="email"
+                      inputMode="email"
+                    />
+                    <div className="min-h-[18px] mt-1">
+                      {errors.email && (
+                        <p className="text-red-500 text-xs text-right">{errors.email}</p>
+                      )}
+                    </div>
+                  </div>
+
+                  {/* Phone */}
+                  <div>
+                    <input
+                      type="tel"
+                      name="phone"
+                      placeholder="Mobile Number"
+                      value={formData.phone}
+                      onChange={handleChange}
+                      maxLength={10}
+                      className="bg-gray-100 text-black p-3 rounded-md outline-0 w-full text-[12px]
+                      focus:border-accent-gold focus:border-2 focus:ring-0 cursor-text transition-all duration-200"
+                      autoComplete="tel"
+                      inputMode="numeric"
+                      pattern="[0-9]*"
+                    />
+                    <div className="min-h-[18px] mt-1">
+                      {errors.phone && (
+                        <p className="text-red-500 text-xs text-right">{errors.phone}</p>
+                      )}
+                    </div>
+                  </div>
+
+                  {/* Date */}
+                  <div>
+                    <input
+                      type="date"
+                      name="date"
+                      value={formData.date}
+                      onChange={handleChange}
+                      min={todayStr}
+                      className="bg-gray-100 text-black p-3 rounded-md outline-0 w-full text-[12px]
+                      focus:border-accent-gold focus:border-2 focus:ring-0 cursor-text transition-all duration-200"
+                    />
+                    <div className="min-h-[18px] mt-1">
+                      {errors.date && (
+                        <p className="text-red-500 text-xs text-right">{errors.date}</p>
+                      )}
+                    </div>
                   </div>
                 </div>
 
-                {/* Email */}
-                <div>
-                  <input
-                    type="email"
-                    name="email"
-                    placeholder="Email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    maxLength={254}
-                    className="bg-gray-100 text-black p-3 rounded-md outline-0 w-full text-[12px]
-                      focus:border-accent-gold focus:border-2 focus:ring-0 cursor-text transition-all duration-200"
-                    autoComplete="email"
-                    inputMode="email"
-                  />
+                <div className="py-5">
                   <div className="min-h-[18px] mt-1">
-                    {errors.email && (
-                      <p className="text-red-500 text-xs text-right">{errors.email}</p>
+                    {success && (
+                      <p className="text-green-600 text-sm font-medium mb-2">
+                        Your message has been successfully sent!
+                      </p>
+                    )}
+                    {submissionError && (
+                      <p className="text-red-600 text-sm font-medium mb-2">
+                        {submissionError}
+                      </p>
                     )}
                   </div>
-                </div>
 
-                {/* Phone */}
-                <div>
-                  <input
-                    type="tel"
-                    name="phone"
-                    placeholder="Mobile Number"
-                    value={formData.phone}
-                    onChange={handleChange}
-                    maxLength={10}
-                    className="bg-gray-100 text-black p-3 rounded-md outline-0 w-full text-[12px]
-                      focus:border-accent-gold focus:border-2 focus:ring-0 cursor-text transition-all duration-200"
-                    autoComplete="tel"
-                    inputMode="numeric"
-                    pattern="[0-9]*"
-                  />
-                  <div className="min-h-[18px] mt-1">
-                    {errors.phone && (
-                      <p className="text-red-500 text-xs text-right">{errors.phone}</p>
-                    )}
-                  </div>
-                </div>
-
-                {/* Date */}
-                <div>
-                  <input
-                    type="date"
-                    name="date"
-                    value={formData.date}
-                    onChange={handleChange}
-                    min={todayStr}
-                    className="bg-gray-100 text-black p-3 rounded-md outline-0 w-full text-[12px]
-                      focus:border-accent-gold focus:border-2 focus:ring-0 cursor-text transition-all duration-200"
-                  />
-                  <div className="min-h-[18px] mt-1">
-                    {errors.date && (
-                      <p className="text-red-500 text-xs text-right">{errors.date}</p>
-                    )}
-                  </div>
-                </div>
-              </div>
-
-              <div className="py-5">
-                <div className="min-h-[18px] mt-1">
-                  {success && (
-                    <p className="text-green-600 text-sm font-medium mb-2">
-                      Your message has been successfully sent!
-                    </p>
-                  )}
-                  {submissionError && (
-                    <p className="text-red-600 text-sm font-medium mb-2">
-                      {submissionError}
-                    </p>
-                  )}
-                </div>
-
-                <button
-                  type="submit"
-                  disabled={loading}
-                  className={`flex items-center justify-center gap-2 px-8 py-3 rounded-full transition
+                  <button
+                    type="submit"
+                    disabled={loading}
+                    className={`flex items-center justify-center gap-2 px-8 py-3 rounded-full transition
                     ${loading
-                      ? "bg-gray-300 text-gray-600 cursor-not-allowed"
-                      : "bg-accent-gold text-white hover:bg-accent-red cursor-pointer"
-                    }`}
-                >
-                  {loading ? "Submitting..." : "Book an Appointment"} <FiArrowUpRight />
-                </button>
-              </div>
-            </form>
-          </div>
+                        ? "bg-gray-300 text-gray-600 cursor-not-allowed"
+                        : "bg-accent-gold text-white hover:bg-accent-red cursor-pointer"
+                      }`}
+                  >
+                    {loading ? "Submitting..." : "Book an Appointment"} <FiArrowUpRight />
+                  </button>
+                </div>
+              </form>
+            </div>
 
-          <div className="p-6 w-full lg:w-6/12 text-center lg:text-left">
-            <p className="text-3xl md:text-[32px] text-yellow-600 font-semibold tracking-widest mb-2">
-              APPOINTMENT
-            </p>
-            <h2 className="text-3xl md:text-[32px] font-bold mb-4">
-              Book an Appointment with Our Experts Today
-            </h2>
-            <p className="text-base md:text-lg text-white leading-relaxed">
-              Schedule your appointment now and experience the difference of compassionate, expert care designed around you!
-            </p>
+            <div className="p-6 w-full lg:w-6/12 text-center lg:text-left">
+              <p className="text-3xl md:text-[32px] text-yellow-600 font-semibold tracking-widest mb-2">
+                APPOINTMENT
+              </p>
+              <h2 className="text-3xl md:text-[32px] font-bold mb-4">
+                Book an Appointment with Our Experts Today
+              </h2>
+              <p className="text-base md:text-lg text-white leading-relaxed">
+                Schedule your appointment now and experience the difference of compassionate, expert care designed around you!
+              </p>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }
 
